@@ -4,3 +4,14 @@ The first thing that I did was to start the Docker service, it was really compli
 Once all that was done, I created this project using SpecFlow.
 The complications I had was the way to send the data.
 The answers, but I was able to solve it by debugging and that is that for example "patches" was a list of list, and I just made it list, from there on everything was a little easy.
+
+![image](https://user-images.githubusercontent.com/48999697/231797215-45dcd2b3-30fe-46fb-b48d-cca26e3b56b8.png)
+
+
+# Connection example
+
+
+![image](https://user-images.githubusercontent.com/48999697/231797321-a3434802-ffa1-4671-83e5-969dbf024005.png)
+
+# Test in Postman
+![image](https://user-images.githubusercontent.com/48999697/231798332-3de2823f-92ea-4ab7-ab52-7c6e3a2936ba.png)
