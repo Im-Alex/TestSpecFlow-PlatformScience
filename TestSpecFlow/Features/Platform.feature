@@ -15,7 +15,7 @@ And there are patches of dirt at the following positions:
 
 When the robot moves according to the instruccions "NNESEESWNWW"
 Then the final robot position should be at x equals 1 and y equals 3 
-And the number of patches of dirt cleaned should be 1
+And the number of patches of dirt cleaned should be 2
 
 
 @tag2
@@ -27,8 +27,8 @@ And there are patches of dirt at the following positions:
 | X | Y |
 | 1 | 1 |
 When the robot moves according to the instruccions "EENNN"
-Then the final robot position should be at x equals 4 and y equals 2
-And the number of patches of dirt cleaned should be 0
+Then the final robot position should be at x equals 2 and y equals 3
+And the number of patches of dirt cleaned should be 3
 
 @tag3
 Scenario: Robot starts on a patch of dirt

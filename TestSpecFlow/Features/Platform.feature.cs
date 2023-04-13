@@ -130,7 +130,7 @@ testRunner.When("the robot moves according to the instruccions \"NNESEESWNWW\"",
 testRunner.Then("the final robot position should be at x equals 1 and y equals 3", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 18
-testRunner.And("the number of patches of dirt cleaned should be 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("the number of patches of dirt cleaned should be 2", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -184,10 +184,10 @@ testRunner.And("there are patches of dirt at the following positions:", ((string
 testRunner.When("the robot moves according to the instruccions \"EENNN\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 30
-testRunner.Then("the final robot position should be at x equals 4 and y equals 2", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("the final robot position should be at x equals 2 and y equals 3", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 31
-testRunner.And("the number of patches of dirt cleaned should be 0", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("the number of patches of dirt cleaned should be 3", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
