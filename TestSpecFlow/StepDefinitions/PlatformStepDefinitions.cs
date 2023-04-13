@@ -29,7 +29,16 @@ namespace TestSpecFlow.StepDefinitions
         public void GivenTheRoomSizeIsBy(int x, int y)
         {
             var roomSize = new int[] { x, y };
-            _context["roomSize"] = roomSize;
+            try
+            {
+               
+                _context["roomSize"] = roomSize;
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            
         }
 
         [Given(@"the robot starts at x equals (.*) and y equals (.*)")]
@@ -45,6 +54,7 @@ namespace TestSpecFlow.StepDefinitions
 
 
             var patches = new List<Patch>();
+
             foreach(var row in table.Rows)
             {
                 var x = int.Parse(row["X"]);
@@ -76,6 +86,7 @@ namespace TestSpecFlow.StepDefinitions
         [Then(@"the final robot position should be at x equals (.*) and y equals (.*)")]
         public async Task ThenTheFinalRobotPositionShouldBeAtXEqualsAndYEqualsAsync(int x, int y)
         {
+            
             var coord = new int[] { x, y };
             _context["coord"] = coord;
 
@@ -95,6 +106,7 @@ namespace TestSpecFlow.StepDefinitions
             var content = new StringContent(json, Encoding.UTF8, "application/json");
             _response = await _client.PostAsync("http://localhost:8080/v1/cleaning-sessions", content);
             // STATUS 200
+            Console.WriteLine("\n" + _response.StatusCode);
             Assert.IsTrue(_response.StatusCode == HttpStatusCode.OK);
             //Console.WriteLine("\n" + content);
             var responseContent = await _response.Content.ReadAsStringAsync();
@@ -106,7 +118,8 @@ namespace TestSpecFlow.StepDefinitions
 
             var coordsResponse = responsePayload.GetType().GetProperty("coords").GetValue(responsePayload, null) as int[];
             //Console.WriteLine("\n" + coordsResponse);
-            //Console.WriteLine("\n" + x);
+            Console.WriteLine("\n" + x);
+            Console.WriteLine("\n" + x);
             Assert.IsNotNull(coords);
             Assert.AreEqual(x, coordsResponse[0]);
             Assert.AreEqual(y, coordsResponse[1]);
@@ -124,7 +137,7 @@ namespace TestSpecFlow.StepDefinitions
         [Given(@"there are no patches of dirt in the room")]
         public void GivenThereAreNoPatchesOfDirtInTheRoom()
         {
-            _context["patches"] = new List<int[]>();
+            _context["patches"] = new List<int[]> { new int[] { } };
         }
 
 

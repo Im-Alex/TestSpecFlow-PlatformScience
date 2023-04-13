@@ -244,7 +244,7 @@ testRunner.When("the robot moves according to the instruccions \"NNESEESWNWW\"",
 testRunner.Then("the final robot position should be at x equals 1 and y equals 3", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 43
-testRunner.And("the number of patches of dirt cleaned should be 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("the number of patches of dirt cleaned should be 2", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();

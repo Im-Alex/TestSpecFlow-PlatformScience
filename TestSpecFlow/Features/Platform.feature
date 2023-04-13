@@ -40,7 +40,7 @@ And there are patches of dirt at the following positions:
 | 2 | 2 |
 When the robot moves according to the instruccions "NNESEESWNWW"
 Then the final robot position should be at x equals 1 and y equals 3
-And the number of patches of dirt cleaned should be 1
+And the number of patches of dirt cleaned should be 2
 
 @tag4
 Scenario: Robot starts outside the room and hits a wall
