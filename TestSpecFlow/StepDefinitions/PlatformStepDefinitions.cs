@@ -109,6 +109,7 @@ namespace TestSpecFlow.StepDefinitions
             //Console.WriteLine("\n" + x);
             Assert.IsNotNull(coords);
             Assert.AreEqual(x, coordsResponse[0]);
+            Assert.AreEqual(y, coordsResponse[1]);
         }
         [Then(@"the number of patches of dirt cleaned should be (.*)")]
         public void ThenTheNumberOfPatchesOfDirtCleanedShouldBe(int p0)
@@ -119,6 +120,13 @@ namespace TestSpecFlow.StepDefinitions
             Console.WriteLine("\n" + cleanedPatches);
             Assert.AreEqual(p0, cleanedPatches);
         }
+
+        [Given(@"there are no patches of dirt in the room")]
+        public void GivenThereAreNoPatchesOfDirtInTheRoom()
+        {
+            _context["patches"] = new List<int[]>();
+        }
+
 
     }
 }
